@@ -1,38 +1,139 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+*{
+  font-family: 'DM Sans', sans-serif;
+}
+body{
+  background: url("https://img.freepik.com/premium-vector/mountain-night-landscape-wallpaper-vector-lake-view_538866-358.jpg");
+  background-size: cover;
+  backdrop-filter: blur(2px);
+  height: 100vh;
+ 
+}
+main{
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+main h1{
+  color: white;
+  text-shadow: 0 0 10px black;
+  font-weight: 900;
   text-align: center;
+  font-size: 18px;
+  rotate: -5deg;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.textBox{
+  background-color: rgba(11, 24, 44, 0.822);
+  border: 1px solid rgb(139, 139, 160);
+  border-radius: 10px;
+  width: 600px;
+  height: fit-content;
+  resize: none;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.flex{
+  display: flex;
+  gap: 20px;
 }
+.textBox textarea{
+  position: relative;
+  top: 0;
+  background-color: transparent;
+  border-radius: 10px;
+  height: 250px;
+  width: 500px;
+  resize: none;
+  padding: 30px;
+  font-size: 24px;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+  border: none;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+}
+.textBox textarea:focus{
+  outline: none;
+}
+hr{
+  width: 90%;
+  border-color: rgba(255, 255, 255, 0.411);
+}
+.unselected{
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.411);
+  border:none;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 25px;
+  font-weight: 700;
+  transition: 150ms;
+  font-size: 16px;
+}
+.language button:hover{
+  color: white;
+  transition: 150ms;
+  cursor: pointer;
+}
+.selected{
+  background-color: rgba(112, 112, 126, 0.521);
+  color: white;
+  border:none;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 25px;
+  font-weight: 700;
+  transition: 150ms;
+  font-size: 16px;
+}
+.buttons{
+  display: flex;
+  justify-content: space-between;
+}
+.translatebutton{
+  background-color: rgb(75, 75, 199);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+  font-weight: 700;
+  transition: 300ms;
+}
+.translatebutton:hover{
+  background-color: rgb(24, 26, 107);
+  transition: 300ms;
+  cursor: pointer;
+}
+.items{
+  background-color: transparent;
+  color: white;
+  border: 2px solid gray;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+  font-weight: 700;
+  transition: 300ms;
+}
+.items:hover{
+  background-color: gray;
+  transition: 300ms;
+  cursor: pointer;
+}
+@media only screen and (max-width: 800px) {
+  .flex {
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+  .textBox{
+    width: 350px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .textBox textarea{
+    width: 250px;
   }
 }
